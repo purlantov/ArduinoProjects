@@ -1,0 +1,9 @@
+C:\Users\pavel\Documents\GitHub\ArduinoProjects\HeartRateMonitor\HeartRateMonitor\bin\Debug\HeartRateMonitor.exe.config
+C:\Users\pavel\Documents\GitHub\ArduinoProjects\HeartRateMonitor\HeartRateMonitor\bin\Debug\HeartRateMonitor.exe
+C:\Users\pavel\Documents\GitHub\ArduinoProjects\HeartRateMonitor\HeartRateMonitor\bin\Debug\HeartRateMonitor.pdb
+C:\Users\pavel\Documents\GitHub\ArduinoProjects\HeartRateMonitor\HeartRateMonitor\obj\Debug\HeartRateMonitor.csprojResolveAssemblyReference.cache
+C:\Users\pavel\Documents\GitHub\ArduinoProjects\HeartRateMonitor\HeartRateMonitor\obj\Debug\HeartRateMonitor.Form1.resources
+C:\Users\pavel\Documents\GitHub\ArduinoProjects\HeartRateMonitor\HeartRateMonitor\obj\Debug\HeartRateMonitor.Properties.Resources.resources
+C:\Users\pavel\Documents\GitHub\ArduinoProjects\HeartRateMonitor\HeartRateMonitor\obj\Debug\HeartRateMonitor.csproj.GenerateResource.Cache
+C:\Users\pavel\Documents\GitHub\ArduinoProjects\HeartRateMonitor\HeartRateMonitor\obj\Debug\HeartRateMonitor.exe
+C:\Users\pavel\Documents\GitHub\ArduinoProjects\HeartRateMonitor\HeartRateMonitor\obj\Debug\HeartRateMonitor.pdb
