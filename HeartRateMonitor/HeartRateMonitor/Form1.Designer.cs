@@ -82,10 +82,11 @@
             // label_HeartBeat
             // 
             this.label_HeartBeat.AutoSize = true;
-            this.label_HeartBeat.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_HeartBeat.Location = new System.Drawing.Point(1032, 178);
+            this.label_HeartBeat.BackColor = System.Drawing.Color.White;
+            this.label_HeartBeat.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold);
+            this.label_HeartBeat.Location = new System.Drawing.Point(861, 28);
             this.label_HeartBeat.Name = "label_HeartBeat";
-            this.label_HeartBeat.Size = new System.Drawing.Size(107, 23);
+            this.label_HeartBeat.Size = new System.Drawing.Size(133, 28);
             this.label_HeartBeat.TabIndex = 4;
             this.label_HeartBeat.Text = "Heart Rate";
             // 

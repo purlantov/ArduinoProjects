@@ -20,6 +20,7 @@ namespace HeartRateMonitor
         private Graphics drawArea;
         private string dataIn;
         int value = 0;
+        int defaultValue = 286;
         bool eventHandler = true;
 
         Counter counter = new Counter();
@@ -69,7 +70,7 @@ namespace HeartRateMonitor
         //
         //Event Handler
         //
-        public virtual void myPort_DataReceived(object sender, SerialDataReceivedEventArgs e)
+        public void myPort_DataReceived(object sender, SerialDataReceivedEventArgs e)
         {
 
             dataIn = myPort.ReadLine();
@@ -84,6 +85,10 @@ namespace HeartRateMonitor
             {
                 value = int.Parse(dataIn);
             }
+            else
+            {
+                value = defaultValue;
+            }
 
             this.Invoke(new EventHandler(displaydata_event));
 
@@ -92,12 +97,14 @@ namespace HeartRateMonitor
                 this.Close();
                 this.Dispose();
                 this.Refresh();
+
+
             }
         }
 
-        private void displaydata_event(object sender, EventArgs e)
+        private void displaydata_event(object sender, EventArgs ev)
         {
-            label_value.Text = dataIn;
+            label_value.Text = String.Format("RAW DATA: {0}", dataIn);
             DrawingLoop(value);
             progressBar.Value = progressBar.Maximum - value - 100;
             counter.Count(value);
@@ -114,7 +121,6 @@ namespace HeartRateMonitor
             try
             {
                 myPort.Close();
-
             }
             catch (Exception ex)
             {

@@ -27,7 +27,7 @@ namespace HeartRateMonitor
 
         public override string ToString()
         {
-            return String.Format("{0}", counter);
+            return String.Format("{0} bpm", counter);
         }
     }
 }
