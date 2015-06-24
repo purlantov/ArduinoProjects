@@ -10,7 +10,7 @@ namespace HeartRateMonitor
 {
     public class Counter
     {
-        private const int amplitudeConstant = 160;
+        private const int amplitudeConstant = 130;
         int counter;
         public int Count(int value)
         {

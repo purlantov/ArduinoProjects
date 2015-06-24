@@ -134,7 +134,7 @@ namespace HeartRateMonitor
         //
         public void DrawingLoop(int value)
         {
-            Pen pen = new Pen(Color.Blue);
+            Pen pen = new Pen(Color.Blue, 1);
             oldX = x;
             oldY = y;
             y = value;
