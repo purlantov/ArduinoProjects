@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -21,7 +22,6 @@ namespace HeartRateMonitor
         private string dataIn;
         int value = 0;
         int defaultValue = 286;
-        bool eventHandler = true;
 
         Counter counter = new Counter();
 
@@ -91,36 +91,41 @@ namespace HeartRateMonitor
             }
 
             this.Invoke(new EventHandler(displaydata_event));
-
-            if (!eventHandler)
-            {
-                this.Close();
-                this.Dispose();
-                this.Refresh();
-
-
-            }
         }
 
         private void displaydata_event(object sender, EventArgs ev)
         {
             label_value.Text = String.Format("RAW DATA: {0}", dataIn);
             DrawingLoop(value);
-            progressBar.Value = progressBar.Maximum - value - 100;
+            progressBar.Value = value;
             counter.Count(value);
             //label_HeartBeat.Text = counter.ToString();
 
         }
+
+
+        #region Close myport properly
+        private void CloseSerialPortInWorkerThread()
+        {
+            ThreadPool.QueueUserWorkItem(new WaitCallback(ThreadProc));
+        }
+
+        private void ThreadProc(Object stateInfo)
+        {
+            // Attempt to close serial port
+            if (this.myPort.IsOpen == true)
+                this.myPort.Close();
+        }
+        #endregion
 
         //
         // Stop button
         //
         private void buttonStop_Click(object sender, EventArgs e)
         {
-            eventHandler = false;
             try
             {
-                myPort.Close();
+                CloseSerialPortInWorkerThread();
             }
             catch (Exception ex)
             {
@@ -137,7 +142,7 @@ namespace HeartRateMonitor
             Pen pen = new Pen(Color.Blue, 1);
             oldX = x;
             oldY = y;
-            y = value;
+            y = pictureBox.Height - value;
             x = oldX + 2;
 
             drawArea.DrawLine(pen, oldX, oldY, x, y);
@@ -163,6 +168,14 @@ namespace HeartRateMonitor
         {
             label_HeartBeat.Text = counter.ToString();
             counter.Count(0);
+        }
+
+        //
+        //Close button
+        //
+        private void buttonClose_Click(object sender, EventArgs e)
+        {
+            System.Windows.Forms.Application.Exit();
         }
     }
 }

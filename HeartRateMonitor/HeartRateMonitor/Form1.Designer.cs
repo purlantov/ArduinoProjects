@@ -38,6 +38,7 @@
             this.progressBar = new System.Windows.Forms.ProgressBar();
             this.buttonSave = new System.Windows.Forms.Button();
             this.timer = new System.Windows.Forms.Timer(this.components);
+            this.buttonClose = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
             this.SuspendLayout();
             // 
@@ -122,12 +123,23 @@
             this.timer.Interval = 5000;
             this.timer.Tick += new System.EventHandler(this.timer_Tick);
             // 
+            // buttonClose
+            // 
+            this.buttonClose.Location = new System.Drawing.Point(1043, 518);
+            this.buttonClose.Name = "buttonClose";
+            this.buttonClose.Size = new System.Drawing.Size(75, 23);
+            this.buttonClose.TabIndex = 8;
+            this.buttonClose.Text = "Close";
+            this.buttonClose.UseVisualStyleBackColor = true;
+            this.buttonClose.Click += new System.EventHandler(this.buttonClose_Click);
+            // 
             // HeartRateMonitor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(1151, 559);
+            this.Controls.Add(this.buttonClose);
             this.Controls.Add(this.buttonSave);
             this.Controls.Add(this.progressBar);
             this.Controls.Add(this.label_value);
@@ -155,6 +167,7 @@
         private System.Windows.Forms.ProgressBar progressBar;
         private System.Windows.Forms.Button buttonSave;
         private System.Windows.Forms.Timer timer;
+        private System.Windows.Forms.Button buttonClose;
 
     }
 }
