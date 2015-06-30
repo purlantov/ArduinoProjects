@@ -7,3 +7,12 @@ C:\Users\pavel\Documents\GitHub\ArduinoProjects\HeartRateMonitor\HeartRateMonito
 C:\Users\pavel\Documents\GitHub\ArduinoProjects\HeartRateMonitor\HeartRateMonitor\obj\Debug\HeartRateMonitor.csproj.GenerateResource.Cache
 C:\Users\pavel\Documents\GitHub\ArduinoProjects\HeartRateMonitor\HeartRateMonitor\obj\Debug\HeartRateMonitor.exe
 C:\Users\pavel\Documents\GitHub\ArduinoProjects\HeartRateMonitor\HeartRateMonitor\obj\Debug\HeartRateMonitor.pdb
+C:\Users\Constantin\Documents\GitHub\ArduinoProjects\HeartRateMonitor\HeartRateMonitor\bin\Debug\HeartRateMonitor.exe.config
+C:\Users\Constantin\Documents\GitHub\ArduinoProjects\HeartRateMonitor\HeartRateMonitor\obj\Debug\HeartRateMonitor.exe
+C:\Users\Constantin\Documents\GitHub\ArduinoProjects\HeartRateMonitor\HeartRateMonitor\obj\Debug\HeartRateMonitor.pdb
+C:\Users\Constantin\Documents\GitHub\ArduinoProjects\HeartRateMonitor\HeartRateMonitor\bin\Debug\HeartRateMonitor.exe
+C:\Users\Constantin\Documents\GitHub\ArduinoProjects\HeartRateMonitor\HeartRateMonitor\bin\Debug\HeartRateMonitor.pdb
+C:\Users\Constantin\Documents\GitHub\ArduinoProjects\HeartRateMonitor\HeartRateMonitor\obj\Debug\HeartRateMonitor.csprojResolveAssemblyReference.cache
+C:\Users\Constantin\Documents\GitHub\ArduinoProjects\HeartRateMonitor\HeartRateMonitor\obj\Debug\HeartRateMonitor.Properties.Resources.resources
+C:\Users\Constantin\Documents\GitHub\ArduinoProjects\HeartRateMonitor\HeartRateMonitor\obj\Debug\HeartRateMonitor.csproj.GenerateResource.Cache
+C:\Users\Constantin\Documents\GitHub\ArduinoProjects\HeartRateMonitor\HeartRateMonitor\obj\Debug\HeartRateMonitor.HeartRateMonitor.resources

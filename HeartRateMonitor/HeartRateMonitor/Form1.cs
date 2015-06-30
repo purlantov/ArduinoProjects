@@ -21,7 +21,7 @@ namespace HeartRateMonitor
         private Graphics drawArea;
         private string dataIn;
         int value = 0;
-        int defaultValue = 286;
+        int defaultValue = 186;
 
         Counter counter = new Counter();
 
@@ -50,9 +50,6 @@ namespace HeartRateMonitor
             myPort = new SerialPort();
             myPort.BaudRate = 9600;
             myPort.PortName = textBox_PortName.Text;
-            myPort.Parity = Parity.None;
-            myPort.DataBits = 8;
-            myPort.StopBits = StopBits.One;
             myPort.DataReceived += myPort_DataReceived;
 
             try
@@ -61,7 +58,7 @@ namespace HeartRateMonitor
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, "Error");
+                MessageBox.Show(ex.Message, "Error while open serial port");
             }
 
             timer.Start();
@@ -100,7 +97,6 @@ namespace HeartRateMonitor
             progressBar.Value = value;
             counter.Count(value);
             //label_HeartBeat.Text = counter.ToString();
-
         }
 
 
@@ -139,11 +135,14 @@ namespace HeartRateMonitor
         //
         public void DrawingLoop(int value)
         {
-            Pen pen = new Pen(Color.Blue, 1);
+            int penWidht = 1;
+            int xCoordinateIncrement = 2;
+
+            Pen pen = new Pen(Color.Blue, penWidht);
             oldX = x;
             oldY = y;
             y = pictureBox.Height - value;
-            x = oldX + 2;
+            x = oldX + xCoordinateIncrement;
 
             drawArea.DrawLine(pen, oldX, oldY, x, y);
 
