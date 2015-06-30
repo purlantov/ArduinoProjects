@@ -1,6 +1,6 @@
 ﻿namespace HeartRateMonitor
 {
-    partial class Form1
+    partial class HeartRateMonitor
     {
         /// <summary>
         /// Required designer variable.
@@ -122,7 +122,7 @@
             this.timer.Interval = 5000;
             this.timer.Tick += new System.EventHandler(this.timer_Tick);
             // 
-            // Form1
+            // HeartRateMonitor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -136,8 +136,8 @@
             this.Controls.Add(this.buttonStop);
             this.Controls.Add(this.buttonStart);
             this.Controls.Add(this.pictureBox);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Name = "HeartRateMonitor";
+            this.Text = "Heart Rate Monitor";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

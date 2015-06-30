@@ -13,7 +13,7 @@ using System.IO.Ports;
 
 namespace HeartRateMonitor
 {
-    public partial class Form1 : Form
+    public partial class HeartRateMonitor : Form
     {
         //some variables
         private SerialPort myPort;
@@ -30,7 +30,7 @@ namespace HeartRateMonitor
         int oldX = 0;
         int oldY = 0;
 
-        public Form1()
+        public HeartRateMonitor()
         {
             InitializeComponent();
             drawArea = pictureBox.CreateGraphics();
