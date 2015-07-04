@@ -24,6 +24,7 @@ namespace HeartRateMonitor
         int defaultValue = 186;
 
         Counter counter = new Counter();
+        SaveData saveData = new SaveData();
 
         int x = 0;
         int y = 0;
@@ -97,6 +98,7 @@ namespace HeartRateMonitor
             progressBar.Value = value;
             counter.Count(value);
             //label_HeartBeat.Text = counter.ToString();
+            saveData.DataSave(value);
         }
 
 
@@ -175,6 +177,11 @@ namespace HeartRateMonitor
         private void buttonClose_Click(object sender, EventArgs e)
         {
             System.Windows.Forms.Application.Exit();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
